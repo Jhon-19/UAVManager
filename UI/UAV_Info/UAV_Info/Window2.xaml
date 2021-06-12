@@ -1,0 +1,159 @@
+﻿<Window x:Class="UAV_Info.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UAV_Info"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Window2" Height="1080" Width="1920" WindowStyle="None" AllowsTransparency="True" WindowState="Maximized" 
+            MouseMove="Windows_Move">
+    <Viewbox Stretch="Fill">
+        <Grid Height="1080" Width="1920">
+            <!--上下两行-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--上Grid-->
+            <Grid Height="50" Background="#FF001680" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1920">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Height="30" Width="30" Click="Min_Click"
+                            Background="{x:Null}" BorderBrush="{x:Null}">
+                        <TextBlock Text="&#xe60c;" FontFamily="/#iconfont" Foreground="#FFFFFF" FontSize="18" Margin="0,0,0,0"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Height="30" Width="30" Click="Change_Click"
+                            Background="{x:Null}" BorderBrush="{x:Null}" Margin="30,0,0,0">
+                        <TextBlock Text="&#xe600;" FontFamily="/#iconfont" Foreground="#FFFFFF" FontSize="18" Margin="0,0,0,0"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Height="30" Width="30" Click="Close_Click"
+                            Background="{x:Null}" BorderBrush="{x:Null}" Margin="30,0,0,0">
+                        <TextBlock Text="&#xe629;" FontFamily="/#iconfont" Foreground="#FFFFFF" FontSize="18" Margin="0,0,0,0"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <!--下Grid-->
+            <Grid VerticalAlignment="Top" Margin="0,0,0,0" Grid.Row="1" Width="1920" Height="1030">
+                <!--左右两栏-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="450"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <!--阴影-->
+                <Border Background="#FFFFFF" Panel.ZIndex="1">
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" BlurRadius="30" ShadowDepth="20" Opacity="0.1"/>
+                    </Border.Effect>
+                </Border>
+
+
+                <!--左Grid-->
+                <Grid Panel.ZIndex="1">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="background.jpg" Stretch="UniformToFill" Opacity="0.2"/>
+                    </Grid.Background>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!--标题-->
+                    <TextBlock Text="UAV Info" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" FontWeight="Medium"/>
+
+                    <Border Margin="50 0 50 0" BorderBrush="DarkGray" BorderThickness="0 0 0 1"/>
+
+                    <StackPanel Grid.Row="1">
+                        <Button x:Name="W1_Button" Margin="15 30 15 0" Height="90" Width="380" HorizontalAlignment="Left" 
+                                materialDesign:ShadowAssist.ShadowDepth="Depth3" Background="Transparent" BorderThickness="0" 
+                                Click="W1_Button_Click" FontFamily="Consolas">
+                            <StackPanel Orientation="Horizontal" Width="250">
+                                <TextBlock Text="&#59310;" FontFamily="/#iconfont" FontSize="38" Foreground="#848484" Margin="10 0 0 0"/>
+                                <TextBlock Text="Position" VerticalAlignment="Center" Foreground="#848484" Margin="30 0 0 0" FontSize="22"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Style="{DynamicResource MaterialDesignRaisedButton}" Margin="15 30 15 0" Height="90" Width="380"
+                                HorizontalAlignment="Left" materialDesign:ShadowAssist.ShadowDepth="Depth3" FontFamily="Consolas" Background="#FF3A50B7">
+                            <StackPanel Orientation="Horizontal" Width="250">
+                                <TextBlock Text="&#58944;" FontFamily="/#iconfont"  FontSize="38" Margin="10 0 0 0"/>
+                                <TextBlock Text="Link State" VerticalAlignment="Center" Margin="30 0 0 0" FontSize="22"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="W3_Button" Margin="15 30 15 0" Height="90" Width="380" HorizontalAlignment="Left"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth3" Background="Transparent" BorderThickness="0"
+                                Click="W3_Button_Click" FontFamily="Consolas">
+                            <StackPanel Orientation="Horizontal" Width="250">
+                                <TextBlock Text="&#59392;" FontFamily="/#iconfont" Foreground="#848484" FontSize="38" Margin="10 0 0 0"/>
+                                <TextBlock Text="Node Setting" VerticalAlignment="Center" Foreground="#848484" Margin="30 0 0 0" FontSize="22"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="W4_Button" Margin="15 30 15 0" Height="90" Width="380" HorizontalAlignment="Left"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth3" Background="Transparent" BorderThickness="0"
+                                Click="W4_Button_Click" FontFamily="Consolas">
+                            <StackPanel Orientation="Horizontal" Width="250">
+                                <TextBlock Text="&#59401;" FontFamily="/#iconfont" Foreground="#848484" FontSize="38" Margin="10 0 0 0"/>
+                                <TextBlock Text="Posture" VerticalAlignment="Center" Foreground="#848484" Margin="30 0 0 0" FontSize="22"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="W5_Button" Margin="15 30 15 0" Height="90" Width="380" HorizontalAlignment="Left"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth3" Background="Transparent" BorderThickness="0"
+                                Click="W5_Button_Click" FontFamily="Consolas">
+                            <StackPanel Orientation="Horizontal" Width="250" >
+                                <TextBlock Text="&#59337;" FontFamily="/#iconfont" Foreground="#848484" FontSize="38" Margin="10 0 0 0"/>
+                                <TextBlock Text="Log" VerticalAlignment="Center" Foreground="#848484" Margin="30 0 0 0" FontSize="22"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+
+
+                <!--右Grid-->
+                <Grid Grid.Column="1" Background="#EEEEEE">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="1">
+                        <StackPanel Orientation="Horizontal" Width="800" Height="80" Margin="0 0 0 0" VerticalAlignment="Center">
+                            <TextBlock Text="Link State" VerticalAlignment="Center" Margin="300 0 0 0" FontSize="38" FontFamily="Consolas"/>
+                            <Button x:Name="Map_Button" Style="{StaticResource MaterialDesignRaisedDarkButton}" Height="50"
+                                    Margin="170 25 0 0" Width="100" materialDesign:ButtonAssist.CornerRadius="25"
+                                    ToolTip="Click Here To See UAV Position" Click="Map_Button_Click" FontFamily="Consolas">
+                                <TextBlock Text="Position" FontFamily="Consolas"/>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Border BorderBrush="DarkGray" BorderThickness="1,1,1,1" Width="800" Height="800" HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                            <Canvas x:Name="canvas" Width="800" Height="800"/>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Viewbox>
+
+
+    <Window.Resources>
+        <Style x:Key="UavBtn" TargetType="Button">
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <EventSetter Event="Click" Handler="UAV_Button_Click"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                            <Image x:Name="Img" VerticalAlignment="Center" HorizontalAlignment="Center" Source="uav.png" Stretch="UniformToFill"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+</Window>

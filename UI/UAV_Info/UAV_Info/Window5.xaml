@@ -1,0 +1,200 @@
+﻿<Window x:Class="UAV_Info.Window5"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UAV_Info"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:map="clr-namespace:UAV_Info.Map"
+        mc:Ignorable="d"
+        Title="Window2" Height="1080" Width="1920" WindowStyle="None" AllowsTransparency="True" WindowState="Maximized" 
+            MouseMove="Windows_Move" Background="#FF3A50B7">
+    <Viewbox Stretch="Fill">
+        <Grid Height="1080" Width="1920">
+            <!--上下两行-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--上Grid-->
+            <Grid Height="50" Background="#FF001680" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1920">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Height="30" Width="30" Click="Min_Click"
+                            Background="{x:Null}" BorderBrush="{x:Null}">
+                        <TextBlock Text="&#xe60c;" FontFamily="/#iconfont" Foreground="#FFFFFF" FontSize="18" Margin="0,0,0,0"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Height="30" Width="30" Click="Change_Click"
+                            Background="{x:Null}" BorderBrush="{x:Null}" Margin="30,0,0,0">
+                        <TextBlock Text="&#xe600;" FontFamily="/#iconfont" Foreground="#FFFFFF" FontSize="18" Margin="0,0,0,0"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Height="30" Width="30" Click="Close_Click"
+                            Background="{x:Null}" BorderBrush="{x:Null}" Margin="30,0,0,0">
+                        <TextBlock Text="&#xe629;" FontFamily="/#iconfont" Foreground="#FFFFFF" FontSize="18" Margin="0,0,0,0"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <!--下Grid-->
+            <Grid VerticalAlignment="Top" Margin="0,0,0,0" Grid.Row="1" Width="1920" Height="1030">
+                <!--左右两栏-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="450"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <!--阴影-->
+                <Border Background="#FFFFFF" Panel.ZIndex="1">
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" BlurRadius="30" ShadowDepth="20" Opacity="0.1"/>
+                    </Border.Effect>
+                </Border>
+
+
+                <!--左Grid-->
+                <Grid Panel.ZIndex="1">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="background.jpg" Stretch="UniformToFill" Opacity="0.2"/>
+                    </Grid.Background>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!--标题-->
+                    <TextBlock Text="UAV Info" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" FontWeight="Medium"/>
+
+                    <Border Margin="50 0 50 0" BorderBrush="DarkGray" BorderThickness="0 0 0 1"/>
+
+                    <StackPanel Grid.Row="1">
+                        <Button x:Name="W1_Button" Margin="15 30 15 0" Height="90" Width="380" HorizontalAlignment="Left" 
+                                materialDesign:ShadowAssist.ShadowDepth="Depth3" Background="Transparent" BorderThickness="0" 
+                                Click="W1_Button_Click" FontFamily="Consolas">
+                            <StackPanel Orientation="Horizontal" Width="250">
+                                <TextBlock Text="&#59310;" FontFamily="/#iconfont" FontSize="38" Foreground="#848484" Margin="10 0 0 0"/>
+                                <TextBlock Text="Position" VerticalAlignment="Center" Foreground="#848484" Margin="30 0 0 0" FontSize="22"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="W2_Button" Margin="15 30 15 0" Height="90" Width="380" HorizontalAlignment="Left"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth3" Background="Transparent" BorderThickness="0"
+                                Click="W2_Button_Click" FontFamily="Consolas">
+                            <StackPanel Orientation="Horizontal" Width="250">
+                                <TextBlock Text="&#58944;" FontFamily="/#iconfont" Foreground="#848484" FontSize="38" Margin="10 0 0 0"/>
+                                <TextBlock Text="Link State" VerticalAlignment="Center" Foreground="#848484" Margin="30 0 0 0" FontSize="22"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="W3_Button" Margin="15 30 15 0" Height="90" Width="380" HorizontalAlignment="Left"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth3" Background="Transparent" BorderThickness="0"
+                                Click="W3_Button_Click" FontFamily="Consolas">
+                            <StackPanel Orientation="Horizontal" Width="250">
+                                <TextBlock Text="&#59392;" FontFamily="/#iconfont" Foreground="#848484" FontSize="38" Margin="10 0 0 0"/>
+                                <TextBlock Text="Node Setting" VerticalAlignment="Center" Foreground="#848484" Margin="30 0 0 0" FontSize="22"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="W4_Button" Margin="15 30 15 0" Height="90" Width="380" HorizontalAlignment="Left"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth3" Background="Transparent" BorderThickness="0"
+                                Click="W4_Button_Click" FontFamily="Consolas">
+                            <StackPanel Orientation="Horizontal" Width="250">
+                                <TextBlock Text="&#59401;" FontFamily="/#iconfont" Foreground="#848484" FontSize="38" Margin="10 0 0 0"/>
+                                <TextBlock Text="Posture" VerticalAlignment="Center" Foreground="#848484" Margin="30 0 0 0" FontSize="22"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Style="{DynamicResource MaterialDesignRaisedButton}" Margin="15 30 15 0" Height="90" Width="380"
+                                HorizontalAlignment="Left" materialDesign:ShadowAssist.ShadowDepth="Depth3" Background="#FF3A50B7" FontFamily="Consolas">
+                            <StackPanel Orientation="Horizontal" Width="250">
+                                <TextBlock Text="&#59337;" FontFamily="/#iconfont"  FontSize="38" Margin="10 0 0 0"/>
+                                <TextBlock Text="Log" VerticalAlignment="Center" Margin="30 0 0 0" FontSize="22"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+
+
+                <!--右Grid-->
+                <Grid Grid.Column="1" Background="#EEEEEE">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="7*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="6*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <DataGrid  Name="mydatagrid"   AutoGenerateColumns="False"   VerticalScrollBarVisibility="Visible" Width="840" 
+                                       Margin="20" ItemsSource="{Binding}" SelectionMode="Extended" SelectionUnit="FullRow" 
+                                       IsReadOnly="True" FontSize="20" FontFamily="Consolas" >
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="UAV" Width="100" Binding="{Binding Devname}"></DataGridTextColumn>
+                                    <DataGridTextColumn Header="TaskId" Width="250" Binding="{Binding TaskId}"></DataGridTextColumn>
+                                    <DataGridTextColumn Header="FlyTime" Width="240" Binding="{Binding FlyTime}"></DataGridTextColumn>
+                                    <DataGridTextColumn Header="LandTime" Width="240" Binding="{Binding LandTime}"></DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" HorizontalAlignment="Center" Margin="0 50 0 0">
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                    </Grid>
+                                    <ComboBox x:Name="FilledComboBox3"
+                                        Style="{StaticResource MaterialDesignFilledComboBox}"
+                                        IsEnabled="{Binding Path=IsChecked, ElementName=FilledComboBoxEnabledCheckBox3}"
+                                        DisplayMemberPath="TaskId" SelectedValuePath="TaskId"
+                                        materialDesign:HintAssist.Hint="TaskId" FontSize="20" Width="400" SelectionChanged="FilledComboBox3_SelectionChanged" FontFamily="Consolas"  >
+                                    </ComboBox>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                            <Button x:Name="Show_Again" Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                                Height="50" Width="120" materialDesign:ButtonAssist.CornerRadius="25"
+                                ToolTip="Click Here To Show The Task Again" Click="Show_Again_Clicked" Margin="94,0.4,374,72.8" Grid.Row="1" FontFamily="Consolas">
+                                <TextBlock  Text="Show Again" />
+                            </Button>
+                            <Button x:Name="delete_bt" Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                        Height="50" Width="120" materialDesign:ButtonAssist.CornerRadius="25"
+                        ToolTip="Delete the log" Click="Delete_Clicked" Margin="235,0.4,233,72.8" Grid.Row="1" FontFamily="Consolas">
+                                <TextBlock  Text="Delete" />
+                            </Button>
+                            <Button x:Name="delete_all_bt" Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                                Height="50" Width="120" materialDesign:ButtonAssist.CornerRadius="25"
+                                ToolTip="Delete the log" Click="Delete_All_Clicked" Margin="374,0.4,94,72.8" Grid.Row="1">
+                                <TextBlock  Text="Delete All" FontFamily="Consolas" />
+                            </Button>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Border BorderBrush="DarkGray" BorderThickness="1,1,1,1" Width="620" Height="620" 
+                                    HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                                <map:MapControl x:Name="mapControl2" RenderOptions.BitmapScalingMode="NearestNeighbor" 
+                                                  UseLayoutRounding="True" SnapsToDevicePixels="True" MinZoom="10" MaxZoom="18" Zoom ="12" />
+                            </Border>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Border BorderBrush="DarkGray" BorderThickness="1,1,1,1" Width="620" Height="620" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                <local:HUD x:Name="hud2" Width="620" Height="620" VerticalAlignment="Center" HorizontalAlignment="Center" MaxRollAngle="80" FontFamily="Consolas"
+                                    />
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Viewbox>
+</Window>

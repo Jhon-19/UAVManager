@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\qiuchao.DESKTOP-MEE38AN\source\repos\win_UAV_manage\</FILEPATH>
+      <FILENAME>json.hpp</FILENAME>
+      <LINE>18509</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>未初始化变量 nlohmann::basic_json&lt;std::map,std::vector,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;,bool,__int64,unsigned __int64,double,std::allocator,nlohmann::adl_serializer,std::vector&lt;unsigned char,std::allocator&lt;unsigned char&gt; &gt; &gt;::m_type。始终初始化成员变量(type.6)。</DESCRIPTION>
+    <FUNCTION>nlohmann::basic_json&lt;std::map,std::vector,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;,bool,__int64,unsigned __int64,double,std::allocator,nlohmann::adl_serializer,std::vector&lt;unsigned char,std::allocator&lt;unsigned char&gt; &gt; &gt;::{ctor}</FUNCTION>
+    <DECORATED>??$?0V?$json_ref@V?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@@nlohmann@@@detail@nlohmann@@$0A@@?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@@nlohmann@@QAE@ABV?$json_ref@V?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@@nlohmann@@@detail@1@@Z</DECORATED>
+    <FUNCLINE>18509</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>nlohmann::basic_json&lt;std::map,std::vector,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;,bool,__int64,unsigned __int64,double,std::allocator,nlohmann::adl_serializer,std::vector&lt;unsigned char,std::allocator&lt;unsigned char&gt; &gt; &gt;::m_type</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\qiuchao.DESKTOP-MEE38AN\source\repos\win_UAV_manage\</FILEPATH>
+      <FILENAME>json.hpp</FILENAME>
+      <LINE>18509</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>未初始化变量 nlohmann::basic_json&lt;std::map,std::vector,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;,bool,__int64,unsigned __int64,double,std::allocator,nlohmann::adl_serializer,std::vector&lt;unsigned char,std::allocator&lt;unsigned char&gt; &gt; &gt;::m_value。始终初始化成员变量(type.6)。</DESCRIPTION>
+    <FUNCTION>nlohmann::basic_json&lt;std::map,std::vector,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;,bool,__int64,unsigned __int64,double,std::allocator,nlohmann::adl_serializer,std::vector&lt;unsigned char,std::allocator&lt;unsigned char&gt; &gt; &gt;::{ctor}</FUNCTION>
+    <DECORATED>??$?0V?$json_ref@V?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@@nlohmann@@@detail@nlohmann@@$0A@@?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@@nlohmann@@QAE@ABV?$json_ref@V?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@@nlohmann@@@detail@1@@Z</DECORATED>
+    <FUNCLINE>18509</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>nlohmann::basic_json&lt;std::map,std::vector,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;,bool,__int64,unsigned __int64,double,std::allocator,nlohmann::adl_serializer,std::vector&lt;unsigned char,std::allocator&lt;unsigned char&gt; &gt; &gt;::m_value</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

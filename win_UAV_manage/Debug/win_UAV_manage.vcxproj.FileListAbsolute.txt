@@ -1,0 +1,6 @@
+C:\Users\qiuchao.DESKTOP-MEE38AN\source\repos\win_UAV_manage\Debug\win_UAV_manage.exe
+C:\Users\qiuchao.DESKTOP-MEE38AN\source\repos\win_UAV_manage\Debug\win_UAV_manage.pdb
+C:\Users\qiuchao.DESKTOP-MEE38AN\source\repos\win_UAV_manage\Debug\win_UAV_manage.exe.lastcodeanalysissucceeded
+C:\Users\qiuchao.DESKTOP-MEE38AN\source\repos\win_UAV_manage\Debug\NativeCodeAnalysis.read.1.tlog
+C:\Users\qiuchao.DESKTOP-MEE38AN\Desktop\无人机管理系统\win_UAV_manage\Debug\win_UAV_manage.exe
+C:\Users\qiuchao.DESKTOP-MEE38AN\Desktop\无人机管理系统\win_UAV_manage\Debug\win_UAV_manage.pdb
